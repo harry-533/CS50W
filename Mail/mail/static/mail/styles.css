@@ -1,0 +1,109 @@
+textarea {
+    min-height: 400px;
+}
+
+#newEmail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 98%;
+    height: 30px;
+    border-bottom: 1px solid grey;
+    margin-left: 1%;
+    padding: 0px 10px 0px 10px;
+}
+
+#newEmail:hover {
+    cursor: pointer;
+}
+
+#newEmail:hover #emailSender, #emailRecipient {
+    font-weight: bold;
+}
+
+#emailSender,
+#emailRecipient {
+    flex: 1;
+}
+
+#emailSubject {
+    flex: 1;
+    font-weight: 600;
+}
+
+#emailTimestamp {
+    color: rgb(150, 150, 150);
+    white-space: nowrap;
+}
+
+#viewEmail {
+    margin-top: 2%;
+    margin-left: 1%;
+    font-size: 18px;
+}
+
+#viewTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 98%;
+}
+
+#fromTo {
+    color: rgb(150, 150, 150);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#viewTimestamp {
+    color: rgb(150, 150, 150);
+    font-size: 16px;
+}
+
+#viewSubject {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#viewBody {
+    margin-top: 3%;
+}
+
+#viewButtons {
+    text-align: center;
+}
+
+#viewReply,
+#viewArchive {
+    background-color: white;
+    color: #007bff;
+    font-weight: 350;
+    font-size: 18px;
+    border-color: #007bff;
+    border-width: 0.9px;
+    border-radius: 3px;
+    border-style: solid;
+    outline: none;
+    width: 90px;
+    margin-right: 15px;
+    margin-top: 20px;
+    padding: 3px 0px 3px 0px;
+}
+
+@keyframes hovering {
+    0% {
+        background-color: white;
+    }
+
+    100% {
+        background-color: #007bff;
+    }
+}
+
+#viewReply:hover,
+#viewArchive:hover {
+    color: white;
+    animation-name: hovering;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
