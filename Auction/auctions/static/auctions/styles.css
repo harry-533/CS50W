@@ -1,0 +1,471 @@
+body {
+    padding: 10px;
+}
+
+.select-cat {
+    width: 100px;
+    border: 0;
+    text-align: center;
+    margin-top: 8px;
+    color: #007bff;
+}
+
+#listingForm {
+    position: absolute;
+    left: 2%;
+    padding-top: 15px;
+}
+
+#listingTitle,
+#listingForm textarea,
+#imageURL,
+#listingForm select {
+    width: 500px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#listingForm input[type="submit"] {
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    background-color: rgb(80, 162, 255);
+    border-width: 0px;
+    color: white;
+    border-radius: 5px;
+    left: 25%;
+}
+
+#listingCurrency {
+    position: absolute;
+    font-size: 25px;
+    padding-left: 10px;
+    padding-top: 3px;
+}
+
+#startingBid {
+    padding: 10px 10px 10px 30px;
+}
+
+#listingForm select,
+#startingBid {
+    width: 247.8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    
+}
+
+#listingForm select {
+    text-align: center;
+}
+
+#listingForm input[type="submit"] {
+    margin-left: 20px;
+}
+
+#listingForm input[type="submit"]:hover {
+    background-color: rgb(32, 136, 254);
+}
+
+#activeListing {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+    padding: 20px; 
+    font-family: "Monaco";
+}
+
+.listing {
+    display: flex; 
+    background-color: #fff; 
+    border: 1px solid #ddd; 
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    height: 300px;
+    box-sizing: border-box;
+}
+
+.listing-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    max-width: 200px;
+    margin-right: 20px;
+}
+
+.listing-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.listing-details {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.listing-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.listing-title {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.listing-title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.listing-time {
+    font-size: 12px;
+    padding-right: 10px;
+    padding-top: 8px;
+    color: rgb(116, 116, 116);
+}
+
+.listing-desc {
+    font-size: 16px;
+    margin: 15px 0;
+}
+
+.listing-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.listing-category {
+    font-size: 14px;
+    color: rgb(116, 116, 116);
+}
+
+.listing-bid {
+    display: flex;
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 50px;
+}
+
+#listingView {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px; 
+    padding: 20px 0px 10px 10px; 
+    font-family: "Monaco";
+}
+
+.view {
+    display: flex; 
+    background-color: #fff; 
+    border: 1px solid #ddd; 
+    border-radius: 10px;
+    padding: 15px 150px 15px 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 1200px;
+    height: 700px;
+    box-sizing: border-box;
+}
+
+.view-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    max-width: 600px;
+    margin-left: 40px;
+    margin-right: auto;
+}
+
+.view-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.view-details {
+    position: relative;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 0px 20px 0px;
+    left: 100px;
+}
+
+.view-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.view-title {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.winning-title {
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(0, 146, 0);
+}
+
+.losing-title {
+    font-size: 50px;
+    font-weight: bold;
+    color: red;
+}
+
+.view-price {
+    display: flex;
+    font-size: 50px;
+    font-weight: bold;
+    margin-right: 50px;
+}
+
+.winning-price {
+    display: flex;
+    font-size: 50px;
+    font-weight: bold;
+    margin-right: 50px;
+    color: rgb(0, 146, 0);
+}
+
+.losing-price {
+    display: flex;
+    font-size: 50px;
+    font-weight: bold;
+    margin-right: 50px;
+    color: red;
+}
+
+.view-category {
+    font-size: 18px;
+    padding-left: 10px;
+    color: rgb(116, 116, 116);
+}
+
+.winner {
+    position: absolute;
+    top: 6%;
+    right: 3%;
+    font-size: 30px;
+}
+
+.view-desc {
+    font-size: 25px;
+    margin: 15px 0;
+}
+
+.view-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20%;
+    margin-left: 15px;
+}
+
+.bid-button {
+    position: absolute;
+    bottom: 19.5%;
+    border-radius: 0px 20px 20px 0px;
+    width: 395px;
+    height: 50px;
+    background-color: rgb(12, 113, 255);
+    color: white;
+    border: None;
+    font-weight: bold;
+    outline: none;
+    margin-left: 204px;
+}
+
+.bid-button:hover {
+    background-color: rgb(9, 106, 242);
+}
+
+
+.viewCurrency {
+    position: absolute;
+    bottom: 9%;
+    font-size: 40px;
+    font-family: "Monaco";
+    padding-bottom: 63px;
+    padding-left: 15px;
+    z-index: 1;
+}
+
+.view-bid {
+    padding-bottom: 15px;
+}
+
+.bid-price {
+    position: absolute;
+    bottom: 19.5%;
+    border-radius: 20px 0px 0px 20px;
+    border-color: rgb(215, 215, 215);
+    width: 200px;
+    height: 50px;
+    padding-left: 40px;
+    font-size: 20px;
+    margin-left: 2px;
+}
+
+.watchlist-button {
+    position: absolute;
+    bottom: 10%;
+    border-radius: 20px;
+    width: 600px;
+    height: 50px;
+    background-color: rgb(12, 113, 255);
+    color: white;
+    border: None;
+    font-weight: bold;
+    outline: none;
+}
+
+.watchlist-button:focus {
+    outline: none;
+}
+
+.watchlist-button:hover {
+    background-color: rgb(9, 106, 242);
+}
+
+.comments {
+    display: flex; 
+    background-color: #fff; 
+    border: 1px solid #ddd; 
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 623px;
+    height: 700px;
+    box-sizing: border-box;
+}
+
+.create-comment {
+    position: absolute;
+    display: flex;
+    bottom: 9%;
+    right: 3.2%;
+    height: 60px;
+}
+
+.title-comment {
+    padding-left: 20px;
+    position: absolute;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.comment-title {
+    padding-left: 8px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.user-comments {
+    padding: 80px 10px 80px 10px;
+}
+
+.comment-box {
+    background-color: #f0f0f0; 
+    border: 1px solid #ddd; 
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 570px;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.comment-post {
+    background-color: rgb(12, 113, 255);
+    color: white;
+    font-weight: bold;
+    border: 1.5px solid rgb(93, 93, 93);
+    border-left: 0;
+    width: 100px;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.comment-post:hover {
+    background-color: rgb(9, 106, 242);
+}
+
+.comment-text {
+    padding: 3px 10px 3px 10px;
+    width: 450px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.error,
+.success {
+    position: absolute;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    border-left: 0;
+    width: 600px;
+    height: 50px;
+    border-radius: 20px;
+    bottom: 8%;
+    left: 27.2%;
+    text-align: center;
+    padding: 8px 10px 10px 10px;
+    animation: fadeIn 0.3s linear forwards, fadeOut 0.3s linear 3s forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+
+.error {
+    background-color: rgb(255, 146, 146);
+    border: 1.5px solid rgb(255, 0, 0);
+}
+
+.success {
+    background-color: rgb(193, 255, 196);
+    border: 1.5px solid rgb(0, 255, 30);
+}
+
+.close-listing-button {
+    position: absolute;
+    right: 81%;
+    bottom: 10%;
+    background-color: rgb(255, 39, 39);
+    color: white;
+    border: 0px;
+    border-radius: 20px;
+    font-weight: bold;
+    width: 250px;
+    height: 40px;
+    outline: none;
+}
+
+.close-listing-button:hover {
+    background-color: rgb(255, 0, 0);
+}
+
+.close-listing-button:focus {
+    outline: none;
+}

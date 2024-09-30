@@ -1,0 +1,80 @@
+{% extends "auctions/layout.html" %}
+
+{% block title %}
+    {{ listing.title }}
+{% endblock %}
+
+
+{% block body %} 
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <ul{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</ul>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <ul id="listingView">
+        <li class="view">
+            {% if listing.image %}
+                <div class="view-image">
+                    <img src="{{ listing.image }}" alt="Listing Image">
+                </div>
+            {% endif %}
+            <div class="view-details">
+                <div class="view-header">
+                    <div{% if listing.active is False and listing.winning_id is request.user.id %} class="winning-title" {% elif listing.active is False %} class="losing-title" {% else %} class="view-title" {% endif %}>{{ listing.title }}</div>
+                    <div{% if listing.active is False and listing.winning_id is request.user.id %} class="winning-price" {% elif listing.active is False %} class="losing-price" {% else %} class="view-price" {% endif %}>£{{ listing.starting_bid|floatformat:2 }}</div>
+                </div>
+                <div class="view-category">{{ listing.category }}</div>
+                <div class="view-desc">{{ listing.description }}</div>
+                <div class="view-footer">
+                    <div class="viewCurrency">£</div>
+                    <div class="view-buttons">
+                        <form class="view-bid" method="post" name="bid-form">
+                            {% csrf_token %}
+                            <input class="bid-price" type="text" name="new_bid">
+                            <input class="bid-button" type="submit" value="Bid">
+                        </form>
+                        <form class="view-watchlist" method="post" name="watch-form">
+                            {% csrf_token %}
+                            <input type="hidden" name="watchlist" value="watchlist">
+                            <button class="watchlist-button">{% if watchlisted is False %}Add to Watchlist{% else %}Remove from Watchlist{% endif %}</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div>
+                {% if active is True and owner is True %}
+                    <form class="close-listing" method="post" name="close-form">
+                        {% csrf_token %}
+                        <input type="hidden" name="close" value="close-listing">
+                        <button class="close-listing-button">Close listing</button>
+                    </form>
+                {% endif %}
+            </div>
+            <div>
+                {% if listing.active is False %}
+                    <div class="winner">Listing won by: <strong>{{ winning_user }}<strong></div>
+                {% endif %}
+            </div>
+        </li>
+        <li class="comments">
+            <div class="title-comment">Comments</div>
+            <div class="user-comments">
+                {% for comment in comments %}
+                    <div class="comment-box">
+                        <div class="comment-title">{{ comment.title }}</div>
+                        <div class="comment-content">{{ comment.content }}</div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="post-comment">
+                <form class="create-comment" method="post" name="comment-form">
+                    {% csrf_token %}
+                    <textarea class="comment-text" name="new_comment"></textarea>
+                    <input class="comment-post" type="submit" value="Post">
+                </form>
+            </div>
+        </li>
+    </ul>
+{% endblock %}
