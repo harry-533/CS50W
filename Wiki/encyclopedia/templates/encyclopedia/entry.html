@@ -1,0 +1,11 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{ name }}
+{% endblock %}
+
+{% block body %}
+    <p>{{ entry|safe }}</p>
+    <a href="{% url 'edit' %}?param={{ name }}">Edit</a> <!-- make it pass the title of the entry to edit.html -->
+
+{% endblock %}
