@@ -1,0 +1,32 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+    <ul class="profile">
+        <ul id="profileView">
+            <div id="profileUsername">{{ profile.username }}</div>
+            <div id="profileImg"><img id='profileImg' src='{{ profile.imageURL }}'></div>
+            <span id="profileFollowers"><strong>{{ profile.followerCount }}</strong> Followers</span>
+            <span id="profileFollowing"><strong>{{ profile.following|length }}</strong> Following</span>
+            {% if user.is_authenticated %}
+                {% if user.id != profile.id %}
+                    <form class="profileFollow" method="post" name="followForm">
+                        {% csrf_token %}
+                        <input type="hidden" name="followButton" value="follow">
+                        <button id="profileFollowButton">{{ follow }}</button>
+                    </form>
+                {% endif %}
+            {% endif %}
+        </ul>
+        <ul class="profilePosts">
+            {% for post in posts %}
+                <div id="profilePosts">
+                    <a id="profilePostTitle" href="{% url 'profile' post.user_id %}">{{ post.username }}</a>
+                    <div id="profilePostContent">{{ post.body }}</div>
+                    <div id="profilePostLikes"><img id='heartImg' src='https://shorturl.at/LF0bN'>{{ post.likes }}</div>
+                    <div id="profilePostDate">{{ post.created_at }}</div>
+                </div>
+            {% endfor %}
+            
+        </ul>
+    </ul>
+{% endblock %}

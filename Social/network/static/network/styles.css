@@ -1,0 +1,252 @@
+.mainTitle {
+    margin-left: 0.5%;
+}
+
+.newPost {
+    border: 1px solid rgb(203, 203, 203);
+    margin: 0% 1% 0% 1%;
+    border-radius: 4px;
+}
+
+#newPostTitle {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0.5% 1%;
+}
+
+#newPostContent,
+.postEdit {
+    width: 98%;
+    height: 100px;
+    margin: 0% 1%;
+    border-radius: 5px;
+    padding: 6px;
+}
+
+#newPostButton {
+    margin: 0% 1%;
+    color: white;
+    background-color: #0d7bff;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    height: 30px;
+    width: 50px;
+    font-weight: 450;
+    margin-bottom: 1%;
+}
+
+#newPostButton:hover {
+    background-color: #006ff6;
+}
+
+.posts {
+    border: 1px solid rgb(203, 203, 203);
+    margin: 1% 1% 0% 1%;
+    border-radius: 4px;
+    padding-bottom: 1%;
+    padding-top: 1%;
+}
+
+#postTitle {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    margin: 0.5% 1%;
+    text-decoration: none;
+}
+
+.edit {
+    margin-left: 1%;
+    color: rgb(20, 20, 255);
+    width: 2%;
+    font-size: 18px;
+}
+
+.edit:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.postContent {
+    font-size: 18px;
+    font-weight: 550;
+    margin: 0% 1% 1% 1%;
+}
+
+#postLikes {
+    font-size: 18px;
+    font-weight: 550;
+    margin: 0% 1%;
+}
+
+.postEdit {
+    display: none
+}
+
+.postEditButton {
+    display: none;
+    margin: 0.5% 1%;
+    color: white;
+    background-color: #0d7bff;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    height: 30px;
+    width: 50px;
+    font-weight: 450;
+    margin-bottom: 1%;
+}
+
+#heartImg {
+    width: 22px;
+    margin-right: 0.2%;
+}
+
+.postLikes {
+    font-size: 17px;
+    margin: 0% 1%;
+}
+
+.postLikes:hover {
+    cursor: pointer;
+}
+
+#postDate {
+    margin: 0.2% 1% 0% 1%;
+    color: rgb(162, 162, 162);
+}
+
+.profile {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid rgb(203, 203, 203);
+    border-radius: 4px;
+    margin: 1%;
+}
+
+#profileView {
+    width: 40%;
+    height: 800px;
+    border: 1px solid rgb(203, 203, 203);
+    border-radius: 4px;
+    margin: 1% 0%;
+    padding-top: 30px;
+    align-items: center;
+    text-align: center
+}
+
+#profileUsername {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 5% 0%;
+}
+
+#profileImg {
+    width: 70%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 100%;
+    margin-bottom: 40px;
+}
+
+#profileFollowers {
+    font-size: 30px;
+    padding-right: 10px;
+}
+
+#profileFollowing {
+    font-size: 30px;
+    padding-left: 10px;
+}
+
+#profileFollowButton {
+    width: 150px;
+    height: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    color: white;
+    background-color: #0d7bff;
+}
+
+#profileFollowButton:hover {
+    background-color: #006ff6;
+}
+
+.profilePosts {
+    width: 55%;
+    margin: 1% auto;
+    padding-top: 20px;
+}
+
+#profilePosts {
+    border: 1px solid rgb(203, 203, 203);
+    border-radius: 4px;
+    margin-right: 4.5%;
+    margin-bottom: 2%;
+    padding: 1%;
+}
+
+#profilePostTitle {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    margin: 0.5% 1%;
+    text-decoration: none;
+}
+
+#profilePostContent {
+    font-size: 18px;
+    font-weight: 550;
+    margin: 0% 1% 1% 1%;
+}
+
+#emptyheart {
+    width: 22px;
+    margin-left: 1%;
+    display: none;
+}
+
+#fullheart {
+    width: 22px;
+    margin-left: 1%;
+    display: none;
+}
+
+.postLikes {
+    font-size: 17px;
+    margin: 0%;
+}
+
+.heartButtons {
+    margin-left: 20px;
+}
+
+.heartButtons, .postLikes {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#profilePostLikes {
+    font-size: 17px;
+    margin: 0% 1%;
+}
+
+#profilePostDate {
+    margin: 0.2% 1% 0% 1%;
+    color: rgb(162, 162, 162);
+}
+
+.paginator {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 1%;
+    text-decoration: none;
+}

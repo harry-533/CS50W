@@ -1,0 +1,38 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block body %}
+    <h1 class="mainTitle">Following</h1>
+    {% for post in posts %}
+        {% if post.user_id in user.following %}
+            <div class="posts">
+                <a id="postTitle" href="{% url 'profile' post.user_id %}">{{ post.username }}</a>
+                <div class="postContent">{{ post.body }}</div>
+                <div id="postLikes"><img id='heartImg' src='https://shorturl.at/LF0bN'>{{ post.likes }}</div>
+                <div id="postDate">{{ post.created_at }}</div>
+            </div>
+        {% endif %}
+    {% endfor %}
+
+    <br/><br/>
+    <div class="paginator">
+        <span id="previousPage">
+            {% if posts.has_previous %}
+                <a href="?page=1">&laquo First</a>
+            {% endif %}
+        </span>
+        
+        <span id="currentPage">Page {{ posts.number }} of {{ posts.paginator.num_pages }}</span>
+
+        <span id="nextPage">
+            {% if posts.has_next %}
+                <a href="?page={{ posts.next_page_number }}">Next &raquo</a>
+            {% endif %}
+        </span>
+    </div> 
+
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'network/inbox.js' %}"></script>
+{% endblock %}
